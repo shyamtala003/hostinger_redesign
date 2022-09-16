@@ -12,26 +12,61 @@
 }
 
 body {
-    background: var(--bg);
+    overflow-x: hidden;
+    background: #1d1a40;
 }
 
 a {
-    color: var(--font-black);
+    color: var(--font-white);
 }
 
 .container {
     position: relative;
     width: 100vw;
+    height: 130vh;
+    background: transparent;
 }
 
-nav {
+.container::after
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 250px;
+    height: 250px;
+    background: #00d0b0;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -2;
+}
+
+.container::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 250px;
+    height: 250px;
+    background: #00d0b0;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -2;
+}
+
+nav#navbar {
     position: fixed;
-    width: 100vw;
+    top: 0%;
+    width: 100%;
     padding-block: 15px;
     padding-inline: 7%;
     display: flex;
     align-items: center;
     gap: 2rem;
+    background: rgba(0, 0, 0, 0.105);
+    backdrop-filter: blur(80px);
+    z-index: 22;
 }
 
 #menu__icon {
@@ -40,6 +75,7 @@ nav {
 
 .nav__logo img {
     width: 150px;
+    filter: invert(1);
 }
 
 .navbar__nav {
@@ -76,7 +112,9 @@ a.nav__link {
     top: 100%;
     transform: translate(-40%, 0%);
     padding: 1rem 6rem 1rem 2rem;
-    background: rgba(255, 255, 255, 0.475);
+    background: url(../images/card-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
     list-style: none;
     display: none;
     flex-direction: column;
@@ -85,23 +123,19 @@ a.nav__link {
     gap: 1.5rem;
     border-radius: .5rem;
     transition: display 1s ease-in;
+    z-index: 2;
+    
 }
 
-.drop__down__links::after {
-    content: '';
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    translate: -50% -50%;
-    background: rgba(255, 255, 255, 0.475);
-    rotate: 45deg;
-    width: 20px;
-    height: 20px;
-    z-index: -1;
-}
+
 
 .nav__link:focus+.drop__down__links {
     display: flex;
+}
+
+.nav__link:focus  #menu__link > .down__arrow
+{
+    rotate: 180deg;
 }
 
 li.drop__down__link:hover {
@@ -115,13 +149,21 @@ li.drop__down__link a {
     gap: 1.5rem;
 }
 
+
+
+li.drop__down__link a  img
+{
+    width: 45px;
+    height: 45px;
+}
+
 .menu__text {
     display: flex;
     flex-direction: column;
 }
 
 .menu__text .text__md {
-    color: var(--font-primary);
+    color: var(--font-white);
     font-family: var(--font-roboto);
     font-size: 1.2rem;
     font-weight: 700;
@@ -129,7 +171,7 @@ li.drop__down__link a {
 }
 
 .menu__text .text__sm {
-    color: var(--font-secondary);
+    color: var(--font-gray);
     font-family: var(--font-inter);
     font-size: 14px;
     font-weight: 300;
@@ -146,14 +188,14 @@ li.drop__down__link a {
 
 .btn__login {
     background: var(--btn-primary);
-    color: var(--font-white);
+    color: var(--font-black);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
     font-weight: 600;
     padding: 8px 20px;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .btn__login ion-icon {
@@ -161,15 +203,15 @@ li.drop__down__link a {
 }
 
 .btn__cart {
-    color: var(--font-primary);
+    color: var(--font-white);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
     font-weight: 600;
     padding: 8px 20px;
-    border: 2px solid var(--btn-primary);
-    border-radius: 20px;
+    border: 2px solid var(--font-white);
+    border-radius: 30px;
 }
 
 .btn__cart ion-icon {
@@ -195,6 +237,9 @@ li.drop__down__link a {
         top: 100%;
         left: 0%;
         min-height: 100vh;
+        background: url(../images/card-bg.png) no-repeat;
+        background-size: cover;
+        background-position: center;
         display: none;
         align-items: flex-start;
         justify-content: flex-start;
@@ -233,7 +278,6 @@ li.drop__down__link a {
 
     #menu__link span
     {
-        font-size: 1.4rem;
         font-weight: 700;
     }
 
@@ -243,7 +287,7 @@ li.drop__down__link a {
         transform: translate(0%, 0%);
         padding-inline: 7%;
         padding-block: 10px;
-        background: rgba(255, 255, 255, 0.475);
+        background: rgba(0, 0, 0, 0.275);
         list-style: none;
         display: none;
         flex-direction: column;
@@ -252,6 +296,8 @@ li.drop__down__link a {
         gap: 0px;
         border-radius: .5rem;
         transition: display 1s ease-in;
+        backdrop-filter: blur(100px);
+        --webkit-backdrop-filter:blur(100px)
     }
 
     .drop__down__links::after
@@ -260,15 +306,11 @@ li.drop__down__link a {
         display: none;
     }
 
-    .drop__down__link a img
+    .drop__down__link a:hover
     {
-        display: none;
+        background: rgba(0, 0, 0, 0.375);
     }
 
-    /* li.drop__down__link
-    {
-        border-bottom: 2px solid black;
-    } */
 
     li.drop__down__link:hover {
         scale: 1;
@@ -277,12 +319,17 @@ li.drop__down__link a {
 
     li.drop__down__link a {
         font-family: var(--font-roboto);
-        display: block;
+    }
+
+    li.drop__down__link a  img
+    {
+        width: 45px;
+        height: 45px;
     }
 
     .menu__text .text__md
     {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .text__sm
@@ -302,7 +349,7 @@ li.drop__down__link a {
     
     .btn__login {
         background: var(--btn-primary);
-        color: var(--font-white);
+        color: var(--font-black);
         width: 100%;
         display: flex;
         align-items: center;
@@ -318,7 +365,7 @@ li.drop__down__link a {
     }
     
     .btn__cart {
-        color: var(--font-primary);
+        color: var(--font-white);
         width: 100%;
         display: flex;
         align-items: center;
@@ -334,4 +381,11 @@ li.drop__down__link a {
         font-size: 1.6rem;
     }
     
+}
+
+
+/* hero section */
+.hero__section
+{
+    margin-top: 89px;
 }
