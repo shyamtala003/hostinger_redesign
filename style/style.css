@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+body {
+    background: var(--bg);
+}
+
+a {
+    color: var(--font-black);
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    padding-block: 15px;
+    padding-inline: 7%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#menu__icon {
+    display: none;
+}
+
+.nav__logo img {
+    width: 150px;
+}
+
+.navbar__nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul.navbar__links {
+    list-style-type: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+a.nav__link {
+    font-family: var(--font-roboto);
+    font-weight: 500;
+}
+
+#menu__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.drop__down__links {
+    position: absolute;
+    top: 100%;
+    transform: translate(-40%, 0%);
+    padding: 1rem 6rem 1rem 2rem;
+    background: rgba(255, 255, 255, 0.475);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    border-radius: .5rem;
+    transition: display 1s ease-in;
+}
+
+.drop__down__links::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    translate: -50% -50%;
+    background: rgba(255, 255, 255, 0.475);
+    rotate: 45deg;
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+}
+
+.nav__link:focus+.drop__down__links {
+    display: flex;
+}
+
+li.drop__down__link:hover {
+    scale: 1.1;
+}
+
+li.drop__down__link a {
+    font-family: var(--font-roboto);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__text .text__md {
+    color: var(--font-primary);
+    font-family: var(--font-roboto);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+
+.menu__text .text__sm {
+    color: var(--font-secondary);
+    font-family: var(--font-inter);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1rem;
+}
+
+
+.nav__btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-inter);
+}
+
+.btn__login {
+    background: var(--btn-primary);
+    color: var(--font-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+.btn__login ion-icon {
+    font-size: 1.7rem;
+}
+
+.btn__cart {
+    color: var(--font-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-weight: 600;
+    padding: 8px 20px;
+    border: 2px solid var(--btn-primary);
+    border-radius: 20px;
+}
+
+.btn__cart ion-icon {
+    font-size: 1.6rem;
+}
+
+
+/* media query for navbar*/
+
+@media screen and (max-width:1100px) {
+    #menu__icon {
+        display: inline;
+        width: 30px;
+    }
+
+    nav {
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .navbar__nav {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        min-height: 100vh;
+        display: none;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        transition: all 1s ease-in-out;
+    }
+
+    .navbar__show
+    {
+        display: flex;
+    }
+
+    ul.navbar__links {
+        list-style-type: none;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+        width: 100%;
+    }
+
+    ul.navbar__links li
+    {
+        width: 100%;
+        border-bottom: 2px solid rgba(128, 128, 128, 0.466);
+    }
+
+    ul.navbar__links li #menu__link
+    {
+        width: 100%;
+        justify-content: space-between;
+        padding-inline: 7%;
+        padding-block: 20px;
+    }
+
+    #menu__link span
+    {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    ul.drop__down__links {
+        position: relative;
+        top: 0%;
+        transform: translate(0%, 0%);
+        padding-inline: 7%;
+        padding-block: 10px;
+        background: rgba(255, 255, 255, 0.475);
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0px;
+        border-radius: .5rem;
+        transition: display 1s ease-in;
+    }
+
+    .drop__down__links::after
+    {
+        content: '';
+        display: none;
+    }
+
+    .drop__down__link a img
+    {
+        display: none;
+    }
+
+    /* li.drop__down__link
+    {
+        border-bottom: 2px solid black;
+    } */
+
+    li.drop__down__link:hover {
+        scale: 1;
+    }
+
+
+    li.drop__down__link a {
+        font-family: var(--font-roboto);
+        display: block;
+    }
+
+    .menu__text .text__md
+    {
+        font-size: 1.3rem;
+    }
+
+    .text__sm
+    {
+        display: none;
+    }
+
+    .nav__btns {
+        width: 80%;
+        margin: 30px auto 0px auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        font-family: var(--font-inter);
+    }
+    
+    .btn__login {
+        background: var(--btn-primary);
+        color: var(--font-white);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        font-weight: 600;
+        padding: 11px 20px;
+        border-radius: 20px;
+    }
+    
+    .btn__login ion-icon {
+        font-size: 1.7rem;
+    }
+    
+    .btn__cart {
+        color: var(--font-primary);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        font-weight: 600;
+        padding: 8px 20px;
+        border: 2px solid var(--btn-primary);
+        border-radius: 20px;
+    }
+    
+    .btn__cart ion-icon {
+        font-size: 1.6rem;
+    }
+    
+}

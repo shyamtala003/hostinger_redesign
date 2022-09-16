@@ -1,0 +1,15 @@
+:root
+{
+    --bg:#e7eaf2;
+
+    --font-white:#fff;
+    --font-black:#000;
+
+    --font-primary:#2f1c6a;
+    --font-secondary:#554685;
+
+    --font-roboto:'Roboto', sans-serif;
+    --font-inter:'Inter', sans-serif;
+
+    --btn-primary:#673de6;
+}
