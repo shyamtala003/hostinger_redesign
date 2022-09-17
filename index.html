@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="shortcut icon" href="./images/favicon-97d9192479.ico" type="image/x-icon">
+
     <!-- css variables for themes -->
     <link rel="stylesheet" href="./style/light_theme.css">
 
@@ -17,6 +19,23 @@
 
 <body>
 
+
+        <!-- modal for login -->
+        <div id="modal-login" class="modal-login">
+            <img src="./images/close.png" alt="" id="modal__close">
+            <img src="./images/logo.svg" width="140px" alt="" class="logo" style="filter:invert(1);">
+            <p id="modal-title">login</p>
+            <a href="#">
+                <ion-icon name="call-outline"></ion-icon> Continue with Mobile
+            </a>
+            <a href="#">
+                <ion-icon name="mail-outline"></ion-icon> Continue with Email
+            </a>
+            <a href="#"><img src="./images/google-logo.svg" alt=""> Start with Google</a>
+            <a href="#"><img src="./images/facebook-logo.svg" alt=""> Start with Facebook</a>
+            <button id="modal-btn "><span id="modal-btn-text">Already have an account? </span> <span
+                    id="text-toggle">Login</span></button>
+        </div>
 
     <div class="container">
         <nav id="navbar">
@@ -205,7 +224,7 @@
 
 
                 <div class="nav__btns">
-                    <a href="#" class="btn__login">
+                    <a href="#" class="btn__login" id="btn__login">
                         <ion-icon name="log-in-outline"></ion-icon> <span>Login</span>
                     </a>
                     <a href="#" class="btn__cart">

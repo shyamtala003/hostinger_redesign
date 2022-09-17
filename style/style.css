@@ -12,6 +12,7 @@
 }
 
 body {
+    position: relative;
     overflow-x: hidden;
     background: #1d1a40;
 }
@@ -19,6 +20,132 @@ body {
 a {
     color: var(--font-white);
 }
+
+
+
+/* modal */
+.modal-login {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    min-width: 250px;
+    transform: translate(-50%, -50%);
+    padding: 5%;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 20px;
+    font-family: var(--font-inter);
+    color: var(--font-white);
+    background: transparent;
+    backdrop-filter: blur(45px);
+    -webkit-backdrop-filter: blur(45px);
+    border: 5px solid rgba(0, 0, 0, 0.275);
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.modal-active {
+    top: 50%;
+}
+
+#modal__close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.275);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#modal-login .logo {
+    margin: 0 auto;
+}
+
+#modal-login p {
+    font-size: 1.4rem;
+    margin: 0 auto;
+    color: var(--font-white);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#modal-login a {
+    padding: .7em 2em;
+    border-radius: 10px;
+    background:rgba(23, 29, 49, 0.429);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: var(--font-white);
+}
+
+#modal-login a:hover {
+    background: #dc1475;
+    color: var(--font-white);
+}
+
+#modal-login ion-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+#modal-login a img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+
+#modal-login button {
+    background: transparent;
+    font-size: .9em;
+    font-weight: 500;
+}
+
+#modal-login button span:last-child {
+    color: #00d0b0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#modal-btn-text
+{
+    color: var(--font-white);
+}
+
+
+/* make modal responsie */
+
+@media screen and (max-width:1100px){
+    .modal-active {
+        top: 35%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .modal-login {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .modal-login .logo {
+        width: 120px;
+    }
+
+    .modal-login #modal-title {
+        font-size: 17px;
+    }
+
+    .modal-login #modal__close {
+        width: 30px;
+    }
+}
+
+
 
 .container {
     position: relative;
@@ -63,7 +190,7 @@ nav#navbar {
     gap: 2rem;
     background: rgba(0, 0, 0, 0.105);
     backdrop-filter: blur(80px);
-    z-index: 22;
+    z-index: 5;
 }
 
 #menu__icon {
@@ -567,5 +694,7 @@ p.note ion-icon {
     p.note
     {
         margin-inline: auto;
+        font-size: 1.2rem;
+        text-align: center;
     }
 }

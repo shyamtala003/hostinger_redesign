@@ -1,3 +1,35 @@
+// code for login modal
+let loginBtn = document.getElementById('btn__login');
+let ModalClose = document.getElementById('modal__close');
+let Modal = document.getElementById('modal-login');;
+
+ModalClose.addEventListener("click", () => {
+  Modal.classList.remove("modal-active")
+})
+
+loginBtn.onclick= () => {
+  Modal.classList.toggle("modal-active")
+}
+
+
+let modalTitle = document.getElementById('modal-title');
+let modalBtn = document.getElementById('text-toggle');
+let modalBtn2 = document.getElementById('modal-btn-text');
+
+modalBtn.addEventListener("click", () => {
+
+  if (modalBtn.innerHTML == "Login") {
+      modalBtn2.innerText = "Don't have an account?";
+      modalBtn.innerText = "Register";
+      modalTitle.innerText = "Register";
+  } else {
+      modalBtn2.innerText = "Already have an account?";
+      modalBtn.innerText = "Login";
+      modalTitle.innerText = "Login";
+  }
+})
+
+
 // code for menubar
 let MenuBtn = document.getElementById('menu__icon');
 let NavBar = document.querySelector(".navbar__nav");
