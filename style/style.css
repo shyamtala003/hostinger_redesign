@@ -732,11 +732,32 @@ section.pricing::after {
     text-align: center;
     font-family: var(--font-mulis);
     color: transparent;
-    background: linear-gradient(10deg ,#00ff57,#ff00f8 );
+    background: linear-gradient(75deg ,#00ff57,#bf00ff );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2.5rem;
     font-weight: 800;
+}
+
+.pricing p.title > span:first-child
+{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: transparent;
+    background:var(--font-white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--font-white);
+}
+
+.pricing p.title > span:last-child
+{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: transparent;
+    color: transparent;
+    background: linear-gradient(60deg ,#00ff57,#bf00ff );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .pricing p.desc {
