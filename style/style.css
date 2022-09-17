@@ -529,9 +529,7 @@ img.hero__img {
 
 .hero_title {
     max-width: 450px;
-    background: var(--font-white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--font-white);
     font-family: var(--font-mulis);
     font-size: 2rem;
     font-weight: 700;
@@ -733,8 +731,11 @@ section.pricing::after {
     padding: 3rem 0px 1rem 0px;
     text-align: center;
     font-family: var(--font-mulis);
-    color: var(--font-white);
-    font-size: 2rem;
+    color: transparent;
+    background: linear-gradient(10deg ,#00ff57,#ff00f8 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
     font-weight: 800;
 }
 
@@ -761,6 +762,33 @@ section.pricing::after {
     min-height: 500px;
     padding: 2rem 1.5rem;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.pricing_container .card::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 250px;
+    height: 250px;
+    background: #d000c6;
+    border-radius: 50%;
+    filter: blur(200px);
+    z-index: -2;
+}
+
+.pricing_container .card::before {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 250px;
+    height: 250px;
+    background: #00d0b0;
+    border-radius: 50%;
+    filter: blur(200px);
+    z-index: -2;
 }
 
 .plan__title {
