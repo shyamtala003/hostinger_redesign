@@ -2,7 +2,7 @@
 {
     --bg:transparent;
 
-    --font-white:#edecf5;
+    --font-white:#ffffff;
     --font-gray:rgba(255, 255, 255, 0.365);
 
     --font-primary:#2f1c6a;
@@ -10,6 +10,7 @@
 
     --font-roboto:'Roboto', sans-serif;
     --font-inter:'Inter', sans-serif;
+    --font-mulis:'Mulish', sans-serif;
 
     --btn-primary:#ffffff;
 }
