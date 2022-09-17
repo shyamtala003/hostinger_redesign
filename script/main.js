@@ -1,13 +1,18 @@
 // code for login modal
 let loginBtn = document.getElementById('btn__login');
 let ModalClose = document.getElementById('modal__close');
-let Modal = document.getElementById('modal-login');;
+let Modal = document.getElementById('modal-login');
+let CTA = document.querySelector(".cta__btn");
 
 ModalClose.addEventListener("click", () => {
   Modal.classList.remove("modal-active")
 })
 
 loginBtn.onclick= () => {
+  Modal.classList.toggle("modal-active")
+}
+
+CTA.onclick= () => {
   Modal.classList.toggle("modal-active")
 }
 

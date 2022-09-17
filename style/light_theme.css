@@ -3,7 +3,7 @@
     --bg:transparent;
 
     --font-white:#ffffff;
-    --font-gray:rgba(255, 255, 255, 0.365);
+    --font-gray:rgba(255, 255, 255, 0.817);
 
     --font-primary:#2f1c6a;
     --font-secondary:#554685;
@@ -14,4 +14,6 @@
 
     --btn-primary:#ffffff;
     --btn-secondary:rgb(220, 20, 117);
+
+    --mt:3rem;
 }
