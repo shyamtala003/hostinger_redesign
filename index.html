@@ -9,6 +9,9 @@
 
     <link rel="shortcut icon" href="./images/favicon-97d9192479.ico" type="image/x-icon">
 
+    <!--📌 swiper.js style 📌-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
     <!-- css variables for themes -->
     <link rel="stylesheet" href="./style/light_theme.css">
 
@@ -297,9 +300,9 @@
 
         <section class="find__domain">
             <h1 class="title">Find the perfect domain name</h1>
-    
+
             <div class="domain__search">
-                <input type="search" placeholder="Type your domain addreaa" id=""> <span>|</span> 
+                <input type="search" placeholder="Type your domain address" id=""> <span>|</span>
                 <select name="select__domaim" id="">
                     <option value=".com" selected>.com</option>
                     <option value=".com">.net</option>
@@ -308,9 +311,9 @@
                     <option value=".com">.in</option>
                 </select>
                 <button class="search__domain__btn">Search&nbsp;Domain</button>
-    
+
             </div>
-    
+
             <ul class="domain__list">
                 <li>
                     <div class="domain__info">
@@ -353,6 +356,7 @@
             <div class="pricing_container">
 
                 <div class="card">
+
                     <p class="plan__title">Basic</p>
                     <p class="plan__price"><sup>₹ </sup>99<span>/mo</span></p>
 
@@ -529,17 +533,97 @@
         </section>
 
 
-       
-    
+        <section class="testimonial">
+            
+            <p class="title"><span>Don't take our word for it.</span> <br><span>Trust our customers</span></p>
+
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="testimonial__card">
+                            <div class="testimonial__image">
+                                <img src="./images/testimonials/4.png" alt="">
+                            </div>
+                            <div class="testimonial__cotent">
+                                <img src="./images/“.png" alt="">
+                                <p class="testimonial__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in labore facere dolores, autem placeat iusto. Porro, voluptas quo? Non quasi cum aperiam ratione accusamus sit, praesentium sint ex ipsam?</p>
+                                <p class="name">Joseph Evaqe</p>
+                                <p class="profession">Entrepreneur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial__card">
+                            <div class="testimonial__image">
+                                <img src="./images/testimonials/1.png" alt="">
+                            </div>
+                            <div class="testimonial__cotent">
+                                <img src="./images/“.png" alt="">
+                                <p class="testimonial__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in labore facere dolores, autem placeat iusto. Porro, voluptas quo? Non quasi cum aperiam ratione accusamus sit, praesentium sint ex ipsam?</p>
+                                <p class="name">Johnson Rechard</p>
+                                <p class="profession">Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial__card">
+                            <div class="testimonial__image">
+                                <img src="./images/testimonials/2.png" alt="">
+                            </div>
+                            <div class="testimonial__cotent">
+                                <img src="./images/“.png" alt="">
+                                <p class="testimonial__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in labore facere dolores, autem placeat iusto. Porro, voluptas quo? Non quasi cum aperiam ratione accusamus sit, praesentium sint ex ipsam?</p>
+                                <p class="name">Shyam Tala</p>
+                                <p class="profession">Web Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial__card">
+                            <div class="testimonial__image">
+                                <img src="./images/testimonials/3.png" alt="">
+                            </div>
+                            <div class="testimonial__cotent">
+                                <img src="./images/“.png" alt="">
+                                <p class="testimonial__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in labore facere dolores, autem placeat iusto. Porro, voluptas quo? Non quasi cum aperiam ratione accusamus sit, praesentium sint ex ipsam?</p>
+                                <p class="name">Sachin Bansal</p>
+                                <p class="profession">Bussinessman</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="prev_btn">
+                    <ion-icon name="arrow-back-circle-outline"></ion-icon>
+                </button>
+                <button class="next_btn">
+                    <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                </button>
+            </div>
+
+
+
+        </section>
+
+
+
+
     </div>
 
-    
+
 
 
 
     <!-- ion-icon cdn -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- 📌swiper.js cdn📌 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- general script file -->
     <script src="./script/main.js"></script>

@@ -77,3 +77,29 @@ var x = setInterval( () => {
   }
 }, 1000);
 
+
+
+// swiper init code for testimonials section
+
+var swiper = new Swiper(".mySwiper2", {
+  slidesPerView: 4,
+  spaceBetween: 10,
+  slidesPerGroup: 3,
+  loopFillGroupWithBlank: true,
+  loop: true,
+  allowTouchMove: true,
+
+  navigation: {
+      nextEl: ".next_btn",
+      prevEl: ".prev_btn",
+  },
+  breakpoints: {
+      200: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+      },
+
+  }
+});
+
