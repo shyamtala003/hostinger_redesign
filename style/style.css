@@ -16,7 +16,7 @@ body {
     width: 100%;
     height: 100vh;
     background: #1d1a40;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 
@@ -1055,9 +1055,12 @@ option {
 
 /* 😇make domain__search section responsive😇  */
 @media screen and (max-width:600px) {
+    
+    
     .domain__search {
         padding: 10px;
         flex-direction: column;
+        background: transparent;
     }
 
     input[type="search"]
