@@ -120,7 +120,7 @@ a {
 }
 
 
-/* make modal responsie */
+/* 😇make modal responsie😇 */
 
 @media screen and (max-width:650px) {
     .modal-login {
@@ -337,7 +337,7 @@ li.drop__down__link a img {
 }
 
 
-/* media query for navbar*/
+/* 😇media query for navbar😇*/
 
 @media screen and (max-width:1100px) {
     #menu__icon {
@@ -636,6 +636,8 @@ p.note ion-icon {
     color: #00d0b0;
 }
 
+
+/* 😇make hero section responsive😇 */
 @media screen and (max-width:1000px) {
 
     .hero__section {
@@ -911,7 +913,7 @@ li.feature ion-icon.shield__close {
     text-align: center;
     top: 10%;
     left: 10%;
-    translate: -50% -100%;
+    translate: -48% -100%;
     rotate: -45deg;
     background: #dc1475;
     box-shadow: 0px 0px 50px #dc1475;
