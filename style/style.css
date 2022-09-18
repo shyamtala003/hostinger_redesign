@@ -178,7 +178,7 @@ a {
 nav#navbar {
     position: fixed;
     top: 0%;
-    width: 100%;
+    min-width: 100vw;
     padding-block: 15px;
     padding-inline: 7%;
     display: flex;
@@ -348,6 +348,7 @@ li.drop__down__link a img {
     nav {
         position: relative;
         justify-content: space-between;
+        min-width: 100vw;
     }
 
     .navbar__nav {
@@ -1008,7 +1009,7 @@ input[type="search"]::placeholder {
 input[type="search"] {
     max-width: 500px;
     width: 350px;
-    padding: 20px 25px;
+    padding: 15px 25px;
     background: transparent;
     color: var(--font-white);
 }
@@ -1032,7 +1033,7 @@ option {
 
 .search__domain__btn {
     background: #dc1475;
-    padding: 20px 20px;
+    padding: 15px 20px;
     color: var(--font-white);
     font-family: var(--font-roboto);
     box-shadow: 0px 0px 10px #dc1475;
