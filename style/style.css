@@ -500,7 +500,7 @@ li.drop__down__link a img {
     padding-block: 5%;
     width: 100%;
     display: grid;
-    place-items: center;
+    /* place-items: center; */
     grid-template-columns: repeat(12, 1fr);
     background: transparent;
     backdrop-filter: blur(100px);
@@ -601,7 +601,7 @@ h3.time__counter {
 }
 
 .cta__btn {
-    width: 70%;
+    width: 50%;
     text-align: center;
     margin-top: 1.5rem;
     background: var(--btn-secondary);
@@ -695,7 +695,6 @@ p.note ion-icon {
 section.pricing {
     position: relative;
     width: 100%;
-    height: 100vh;
     background: transparent;
     backdrop-filter: blur(100px);
 }
@@ -732,30 +731,28 @@ section.pricing::after {
     text-align: center;
     font-family: var(--font-mulis);
     color: transparent;
-    background: linear-gradient(75deg ,#00ff57,#bf00ff );
+    background: linear-gradient(75deg, #00ff57, #bf00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2.5rem;
     font-weight: 800;
 }
 
-.pricing p.title > span:first-child
-{
+.pricing p.title>span:first-child {
     font-size: 2.5rem;
     font-weight: 800;
     color: transparent;
-    background:var(--font-white);
+    background: var(--font-white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--font-white);
 }
 
-.pricing p.title > span:last-child
-{
+.pricing p.title>span:last-child {
     font-size: 2.5rem;
     font-weight: 800;
     color: transparent;
     color: transparent;
-    background: linear-gradient(60deg ,#00ff57,#bf00ff );
+    background: linear-gradient(60deg, #00ff57, #bf00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -777,6 +774,18 @@ section.pricing::after {
     gap: 2rem;
 }
 
+.pricing_container .card:nth-child(2) {
+    scale: 1.05;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid #00000014;
+}
+
+.pricing_container .card:hover {
+    scale: 1.05;
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px solid #00000014;
+}
+
 .pricing_container .card {
     background: rgba(0, 0, 0, 0.105);
     backdrop-filter: blur(100px);
@@ -784,6 +793,7 @@ section.pricing::after {
     padding: 2rem 1.5rem;
     border-radius: 10px;
     overflow: hidden;
+    transition: all .5s ease-in;
 }
 
 .pricing_container .card::after {
@@ -889,6 +899,24 @@ li.feature ion-icon.shield__close {
     box-shadow: 0px 10px 30px #00d0b0;
 }
 
+.tag {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 10%;
+    left: 10%;
+    translate: -50% -100%;
+    rotate: -45deg;
+    background: #dc1475;
+    box-shadow: 0px 0px 50px #dc1475;
+    padding: 10px 55px;
+    color: var(--font-white);
+    font-family: var(--font-mulis);
+    font-weight: 700;
+    font-size: .78rem;
+    letter-spacing: 1.5px;
+}
+
 /* 😇make pricing section responsive😇 */
 @media screen and (max-width:1260px) {
     .pricing_container {
@@ -908,4 +936,208 @@ li.feature ion-icon.shield__close {
         grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
     }
+}
+
+
+/* find domain section */
+
+section.find__domain {
+    position: relative;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 5rem 0px 5rem 0px;
+    background: rgba(0, 0, 0, 0.253);
+}
+
+section.find__domain::before {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 250px;
+    height: 250px;
+    background: #00d0b0;
+    border-radius: 50%;
+    filter: blur(200px);
+    z-index: -2;
+}
+
+section.find__domain::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 250px;
+    height: 250px;
+    background: #d000c6;
+    border-radius: 50%;
+    filter: blur(200px);
+    z-index: -2;
+}
+
+.find__domain h1.title {
+    text-align: center;
+    font-family: var(--font-inter);
+    font-size: 2.5rem;
+    color: transparent;
+    text-transform: capitalize;
+    background: linear-gradient(60deg, #00ff57, #bf00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.domain__search {
+    margin: 3rem 50% 1rem 50%;
+    translate: -50% 0%;
+    color: var(--font-white);
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(208, 208, 208, 0.105);
+    border-radius: 5px;
+}
+
+
+input[type="search"]::placeholder {
+    font-family: var(--font-inter);
+    color: var(--font-white);
+}
+
+input[type="search"] {
+    max-width: 500px;
+    width: 350px;
+    padding: 20px 25px;
+    background: transparent;
+    color: var(--font-white);
+}
+
+input[type="search"]:focus {
+    accent-color: #fff;
+    color: var(--font-white);
+    border: none;
+    outline: none;
+}
+
+select {
+    padding: 15px 0px;
+    background: transparent;
+    color: var(--font-white);
+}
+
+option {
+    background: rgb(42, 68, 125);
+}
+
+.search__domain__btn {
+    background: #dc1475;
+    padding: 20px 20px;
+    color: var(--font-white);
+    font-family: var(--font-roboto);
+    box-shadow: 0px 0px 10px #dc1475;
+    border-radius: 5px;
+}
+
+.search__domain__btn:hover {
+    background: #00d0b0;
+    box-shadow: 0px 0px 10px #00d0b0;
+}
+
+
+/* 😇make domain__search section responsive😇  */
+@media screen and (max-width:600px) {
+    .domain__search {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    input[type="search"]
+    {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.405);
+        border-radius: 10px;
+    }
+
+    .domain__search span
+    {
+        display: none;
+    }
+
+    select
+    {
+        background: rgba(0, 0, 0, 0.405);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .search__domain__btn
+    {
+        border-radius: 10px;
+    }
+}
+
+.domain__list
+{
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--font-white);
+}
+
+ul.domain__list li .domain__info
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-inter);
+    padding-inline: 10px;
+}
+
+ul.domain__list li:not(ul.domain__list li:last-child)
+{
+    border-right: 2px solid rgba(255, 255, 255, 0.272);
+}
+
+li .domain__info .domain__name
+{
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+li .domain__info .domain__price
+{
+    color: var(--font-gray);
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+li:first-child .domain__info .domain__name
+{
+    color: rgba(10, 243, 231, 0.6);
+}
+
+li:nth-child(2) .domain__info .domain__name
+{
+    color: rgb(28, 143, 38);
+}
+
+li:nth-child(3) .domain__info .domain__name
+{
+    color: rgba(249, 249, 0, 0.575);
+}
+
+li:nth-child(4) .domain__info .domain__name
+{
+    color: rgb(191, 0, 249);
+}
+
+li:nth-child(5) .domain__info .domain__name
+{
+    color: rgb(25, 183, 159);
 }
