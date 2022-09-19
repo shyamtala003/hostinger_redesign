@@ -1709,8 +1709,8 @@ footer {
     margin-bottom: 20px;
     color: var(--font-white);
     font-family: var(--font-roboto);
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 800;
 }
 
 .link__container ul li {
@@ -1718,15 +1718,17 @@ footer {
 }
 
 .link__container ul li a {
+    text-align: justify;
     color: var(--font-gray);
     font-family: var(--font-mulis);
-    font-size: .9rem;
-
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .link__container ul li a:hover
 {
     color: var(--font-white);
+    border-bottom: 2px solid #fff;
 }
 
 .link__container ul li ul
