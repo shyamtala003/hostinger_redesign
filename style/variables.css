@@ -1,8 +1,17 @@
 :root
 {
-    --bg:transparent;
+    --primary:#00d0b0;
+
+    --bg:#1d1a40;
+    --bg-2:rgba(0, 0, 0, 0.275);
+    --bg-3:rgba(23, 29, 49, 0.429);
+    --bg-4:rgba(0, 0, 0, 0.105);
+    --bg-5:rgba(0, 0, 0, 0.405);
+    --bg-6:rgba(0, 0, 0, .2);
+    --bg-7:rgba(0, 0, 0, 0.2);
 
     --font-white:#ffffff;
+    --font-dark:#000000;
     --font-gray:rgba(255, 255, 255, 0.817);
 
     --font-primary:#2f1c6a;
@@ -16,4 +25,6 @@
     --btn-secondary:rgb(220, 20, 117);
 
     --mt:3rem;
+
+    --scroll-thumb:#00d0b0;
 }
