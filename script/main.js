@@ -8,11 +8,11 @@ ModalClose.addEventListener("click", () => {
   Modal.classList.remove("modal-active")
 })
 
-loginBtn.onclick= () => {
+loginBtn.onclick = () => {
   Modal.classList.toggle("modal-active")
 }
 
-CTA.onclick= () => {
+CTA.onclick = () => {
   Modal.classList.toggle("modal-active")
 }
 
@@ -24,13 +24,13 @@ let modalBtn2 = document.getElementById('modal-btn-text');
 modalBtn.addEventListener("click", () => {
 
   if (modalBtn.innerHTML == "Login") {
-      modalBtn2.innerText = "Don't have an account?";
-      modalBtn.innerText = "Register";
-      modalTitle.innerText = "Register";
+    modalBtn2.innerText = "Don't have an account?";
+    modalBtn.innerText = "Register";
+    modalTitle.innerText = "Register";
   } else {
-      modalBtn2.innerText = "Already have an account?";
-      modalBtn.innerText = "Login";
-      modalTitle.innerText = "Login";
+    modalBtn2.innerText = "Already have an account?";
+    modalBtn.innerText = "Login";
+    modalTitle.innerText = "Login";
   }
 })
 
@@ -40,13 +40,13 @@ let MenuBtn = document.getElementById('menu__icon');
 let NavBar = document.querySelector(".navbar__nav");
 
 MenuBtn.onclick = () => {
-    if (MenuBtn.getAttribute("src") == "./images/nav-icon.png") {
-        NavBar.classList.add("navbar__show");
-        MenuBtn.setAttribute("src", "./images/close.png")
-    } else {
-        NavBar.classList.remove("navbar__show");
-        MenuBtn.setAttribute("src", "./images/nav-icon.png")
-    }
+  if (MenuBtn.getAttribute("src") == "./images/nav-icon.png") {
+    NavBar.classList.add("navbar__show");
+    MenuBtn.setAttribute("src", "./images/close.png")
+  } else {
+    NavBar.classList.remove("navbar__show");
+    MenuBtn.setAttribute("src", "./images/nav-icon.png")
+  }
 
 }
 
@@ -55,7 +55,7 @@ MenuBtn.onclick = () => {
 
 var countDownDate = new Date("Sep 26, 2022 15:37:25").getTime();
 
-var x = setInterval( () => {
+var x = setInterval(() => {
 
   var now = new Date().getTime();
 
@@ -66,10 +66,10 @@ var x = setInterval( () => {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("days").innerHTML = ((days.toString()).length==1)?`0${days}`:`${days}`;
-  document.getElementById("hours").innerHTML = ((hours.toString()).length==1)?`0${hours}`:`${hours}`;
-  document.getElementById("minutes").innerHTML = ((minutes.toString()).length==1)?`0${minutes}`:`${minutes}`;
-  document.getElementById("seconds").innerHTML = ((seconds.toString()).length<=1)?`0${seconds}`:`${seconds}`;
+  document.getElementById("days").innerHTML = ((days.toString()).length == 1) ? `0${days}` : `${days}`;
+  document.getElementById("hours").innerHTML = ((hours.toString()).length == 1) ? `0${hours}` : `${hours}`;
+  document.getElementById("minutes").innerHTML = ((minutes.toString()).length == 1) ? `0${minutes}` : `${minutes}`;
+  document.getElementById("seconds").innerHTML = ((seconds.toString()).length <= 1) ? `0${seconds}` : `${seconds}`;
 
   if (distance < 0) {
     clearInterval(x);
@@ -90,16 +90,21 @@ var swiper = new Swiper(".mySwiper2", {
   allowTouchMove: true,
 
   navigation: {
-      nextEl: ".next_btn",
-      prevEl: ".prev_btn",
+    nextEl: ".next_btn",
+    prevEl: ".prev_btn",
   },
   breakpoints: {
-      200: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          slidesPerGroup: 1,
-      },
+    200: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      slidesPerGroup: 1,
+    },
 
   }
 });
 
+// code for footer copyright text
+let copyright = document.getElementsByClassName("copyright");
+let year = new Date().getFullYear();
+
+copyright[0].innerHTML=`© 2004-${year} hostinger.in - India’s #1 Web Hosting & Domains provider.`;
