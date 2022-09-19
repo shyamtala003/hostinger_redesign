@@ -40,6 +40,31 @@ a {
 }
 
 
+/* page loading animation  */
+#loader
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    z-index: 6;
+    background:url(../images/loading.gif),#000;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+
+}
+
+#loader img
+{
+    width: 30%;
+    filter: invert(1);
+    opacity: .3;
+}
+
 
 /* modal */
 .modal-login {

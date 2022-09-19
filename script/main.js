@@ -1,3 +1,8 @@
+// script for page loading animation
+window.onload=()=>{
+  document.getElementById('loader').style.display="none";
+}
+
 // code for login modal
 let loginBtn = document.getElementById('btn__login');
 let ModalClose = document.getElementById('modal__close');
@@ -53,7 +58,7 @@ MenuBtn.onclick = () => {
 
 // code for timer
 
-var countDownDate = new Date("Sep 26, 2022 15:37:25").getTime();
+var countDownDate = new Date("Oct 12, 2022 15:37:25").getTime();
 
 var x = setInterval(() => {
 

@@ -12,6 +12,9 @@
     <!--📌 swiper.js style 📌-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
+    <!--📌 animateOnScroll style 📌-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- css variables for themes -->
     <link rel="stylesheet" href="./style/variables.css">
 
@@ -22,6 +25,11 @@
 
 <body>
 
+
+    <!-- page loading animation -->
+    <div id="loader">
+        <img src="./images/logo.svg" alt="">
+    </div>
 
     <!-- modal for login -->
     <div id="modal-login" class="modal-login">
@@ -41,7 +49,7 @@
     </div>
 
     <div class="container">
-        <nav id="navbar">
+        <nav id="navbar" data-aos="fade-down">
             <div class="nav__logo">
                 <img src="./images/logo.svg" alt="">
             </div>
@@ -242,7 +250,7 @@
 
 
         <section class="hero__section">
-            <div class="hero__section__content">
+            <div class="hero__section__content" data-aos="fade-up">
                 <h1 class="hero_title">
                     Savings to Set Your Website in Motion
                 </h1>
@@ -294,11 +302,11 @@
                 </p>
 
             </div>
-            <img class="hero__img" src="./images/hosting-coupon.png" alt="">
+            <img class="hero__img" src="./images/hosting-coupon.png" alt="" data-aos="fade-up">
 
         </section>
 
-        <section class="find__domain">
+        <section class="find__domain" data-aos="fade-up">
             <h1 class="title">Find the perfect domain name</h1>
 
             <div class="domain__search">
@@ -348,14 +356,14 @@
             </ul>
         </section>
 
-        <section class="pricing">
+        <section class="pricing" data-aos="fade-up">
             <p class="title"><span>All-In-One</span> <span>Web Hosting</span></p>
             <p class="desc">We prepared the best web hosting plan for you to start. You will be able to adjust plans as
                 you
                 go - our custom-built algorithm will provide suggestions based on your usage.</p>
             <div class="pricing_container">
 
-                <div class="card">
+                <div class="card" data-aos="fade-right">
 
                     <p class="plan__title">Basic</p>
                     <p class="plan__price"><sup>₹ </sup>99<span>/mo</span></p>
@@ -413,7 +421,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="fade-up">
                     <p class="plan__title">Startup</p>
                     <p class="plan__price"><sup>₹ </sup>149<span>/mo</span></p>
 
@@ -471,7 +479,7 @@
                     <p class="tag">Recommended</p>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="fade-left">
                     <p class="plan__title">Premium</p>
                     <p class="plan__price"><sup>₹ </sup>199<span>/mo</span></p>
 
@@ -533,7 +541,7 @@
         </section>
 
 
-        <section class="testimonial">
+        <section class="testimonial" data-aos="zoom-in">
 
             <p class="title"><span>Don't take our word for it.</span> <br><span>Trust our customers</span></p>
 
@@ -618,7 +626,7 @@
         </section>
 
 
-        <section class="services">
+        <section class="services"  data-aos="zoom-in-up">
             <p class="title"><span>Our Best</span> <br><span>Hosting Services</span></p>
             <p class="desc">Web hosting company must be able to good range of features required for website building and
                 hosting. These feature must be reliable, especially when it comes.</p>
@@ -626,7 +634,7 @@
 
             <div class="services__container">
 
-                <div class="card">
+                <div class="card" data-aos="zoom-in-left">
                     <div class="sevice__image">
                         <img src="./images/services/icons8-certificate-64.png" alt="">
                     </div>
@@ -645,7 +653,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="zoom-in-right">
                     <div class="sevice__image">
                         <img src="./images/services/icons8-rocket-64.png" alt="">
                     </div>
@@ -664,7 +672,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="zoom-in-left">
                     <div class="sevice__image">
                         <img src="./images/services/icons8-php-64.png" alt="">
                     </div>
@@ -683,7 +691,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="zoom-in-right">
                     <div class="sevice__image">
                         <img src="./images/services/icons8-customer-support-64.png" alt="">
                     </div>
@@ -702,7 +710,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="zoom-in-left">
                     <div class="sevice__image">
                         <img src="./images/services/icons8-quality-64.png" alt="">
                     </div>
@@ -721,7 +729,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="zoom-in-right">
                     <div class="sevice__image">
                         <img src="./images/services/icons8-data-backup-64.png" alt="">
                     </div>
@@ -740,7 +748,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="zoom-in-left">
                     <div class="sevice__image">
                         <img src="./images/services/icons8-graph-64.png" alt="">
                     </div>
@@ -759,7 +767,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="zoom-in-right">
                     <div class="sevice__image">
                         <img src="./images/services/worldpress1.png" alt="">
                     </div>
@@ -783,12 +791,14 @@
         </section>
 
 
-        <footer>
+        <footer data-aos="fade-up" data-aos-duration="3000">
             <div class="link__container">
                 <ul>
                     <li><img src="./images/logo.svg" alt="" class="footer__logo"></li>
-                    <li><a href="javascript:void(0);">We are a web hosting company with a mission to help everyone who goes online succeed.
-                        We accomplish this by continuously developing server technology, giving expert assistance, and ensuring a flawless online website hosting experience.</a></li>    
+                    <li><a href="javascript:void(0);">We are a web hosting company with a mission to help everyone who
+                            goes online succeed.
+                            We accomplish this by continuously developing server technology, giving expert assistance,
+                            and ensuring a flawless online website hosting experience.</a></li>
                 </ul>
 
                 <ul>
@@ -832,7 +842,7 @@
                             <li>Legal</li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms of Services</a></li>
-                            
+
                         </ul>
                     </li>
                 </ul>
@@ -853,20 +863,30 @@
                     </li>
                 </ul>
             </div>
-            
+
             <hr class="bottom_line">
 
             <div class="social__links">
                 <p class="copyright">
-                   <!-- datat comes from script -->
+                    <!-- datat comes from script -->
                 </p>
 
                 <ul>
-                    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                    <li><a href="#">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a></li>
+                    <li><a href="#">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a></li>
+                    <li><a href="#">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a></li>
+                    <li><a href="#">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a></li>
+                    <li><a href="#">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a></li>
                 </ul>
             </div>
         </footer>
@@ -876,6 +896,11 @@
 
 
 
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <!-- ion-icon cdn -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
