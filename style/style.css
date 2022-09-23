@@ -566,12 +566,181 @@ li.drop__down__link a img {
 }
 
 .hero__img {
+    position: relative;
     grid-column: 7/13;
+    min-height: 400px;
 }
 
-img.hero__img {
-    object-fit: cover;
+.bgImage
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
 }
+
+.animated__tag
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: url(../images/card-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .2);
+    opacity: .9;
+    border: 1px solid rgba(255, 255, 255, 0.256);
+    border-radius: 10px;
+    padding: 10px 30px;
+    backdrop-filter: blur(130px);
+    color: var(--font-white);
+    font-size: 12px;
+    font-family: var(--font-inter);
+    font-weight: 400;
+}
+
+.animated__tag img
+{
+    width: 30px;
+}
+
+.animated__tag #animated__logo
+{
+    width: 100px;
+    filter: invert(1);
+    animation: myAnimBlink 2s linear 0s infinite alternate forwards;
+}
+
+.tag__logo
+{
+    top: 10%;
+    left: 50%;
+    translate: -50%     -50%;
+}
+
+@keyframes myAnimBlink {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.2;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.tag1
+{
+    left: 15%;
+    top: 30%;
+    animation: myAnim 5s ease 0s infinite alternate backwards;
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-30px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.tag2
+{
+    right: 10%;
+    bottom: 45%;
+    animation: myAnim2 8s linear 0s infinite alternate backwards;
+}
+
+@keyframes myAnim2 {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(-5px, 5px);
+	}
+
+	40% {
+		transform: translate(-5px, -5px);
+	}
+
+	60% {
+		transform: translate(5px, 5px);
+	}
+
+	80% {
+		transform: translate(5px, -5px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+.tag3
+{
+    left: 20%;
+    bottom: 20%;
+    translate: -50% -50%;
+    animation: myAnim3 2s linear 0s infinite alternate forwards;
+}
+
+@keyframes myAnim3 {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.05);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
 
 .hero_title {
     max-width: 450px;
