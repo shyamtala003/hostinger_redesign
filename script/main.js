@@ -45,12 +45,12 @@ let MenuBtn = document.getElementById('menu__icon');
 let NavBar = document.querySelector(".navbar__nav");
 
 MenuBtn.onclick = () => {
-  if (MenuBtn.getAttribute("src") == "./images/nav-icon.png") {
+  if (MenuBtn.getAttribute("src") == "./images/nav-icon.webp") {
     NavBar.classList.add("navbar__show");
-    MenuBtn.setAttribute("src", "./images/close.png")
+    MenuBtn.setAttribute("src", "./images/close.webp")
   } else {
     NavBar.classList.remove("navbar__show");
-    MenuBtn.setAttribute("src", "./images/nav-icon.png")
+    MenuBtn.setAttribute("src", "./images/nav-icon.webp")
   }
 
 }
