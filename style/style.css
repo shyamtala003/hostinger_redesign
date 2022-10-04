@@ -433,7 +433,7 @@ li.drop__down__link a img {
     ul.navbar__links li #menu__link {
         width: 100%;
         justify-content: space-between;
-        padding-inline: 7%;
+        padding-inline: 10%;
         padding-block: 20px;
     }
 
@@ -445,7 +445,7 @@ li.drop__down__link a img {
         position: relative;
         top: 0%;
         transform: translate(0%, 0%);
-        padding-inline: 7%;
+        padding-inline:10%;
         padding-block: 10px;
         background: var(--bg-2);
         list-style: none;
@@ -542,11 +542,10 @@ li.drop__down__link a img {
 /* hero section */
 .hero__section {
     margin-top: 69px;
-    padding-left: 5%;
     padding-block: 5%;
     width: 100%;
     display: grid;
-    /* place-items: center; */
+    place-items: center;
     grid-template-columns: repeat(12, 1fr);
     background: transparent;
     backdrop-filter: blur(100px);
@@ -568,16 +567,22 @@ li.drop__down__link a img {
 .hero__img {
     position: relative;
     grid-column: 7/13;
+    height: 100%;
     min-height: 400px;
+    width: 100%;
+    background: url('../images/hosting-coupon.webp') no-repeat;
+    background-size: contain;
+    background-position: center;
 }
-
+/* 
 .bgImage
 {
     position: absolute;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-}
+    width: 500px;
+} */
 
 .animated__tag
 {
@@ -743,18 +748,18 @@ li.drop__down__link a img {
 
 
 .hero_title {
-    max-width: 450px;
+    max-width: 650px;
     color: var(--font-white);
     font-family: var(--font-mulis);
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 2.4rem;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 4.4rem;
 }
 
 .price__tag {
     color: var(--font-white);
     font-family: var(--font-mulis);
-    font-size: 4.6rem;
+    font-size: 4.9rem;
     font-weight: 900;
     line-height: 4.6rem;
 }
@@ -769,12 +774,12 @@ li.drop__down__link a img {
 }
 
 .description {
-    max-width: 400px;
+    max-width: 600px;
     color: var(--font-white);
     font-family: var(--font-mulis);
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    line-height: 22px;
+    line-height: 27px;
 }
 
 .timer {
@@ -1002,10 +1007,15 @@ section.pricing::after {
 
 .pricing_container {
     margin-top: 3rem;
-    padding-inline: 7%;
+    padding-inline: 10%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+.pricing_container .card
+{
+    max-width: 400px;
 }
 
 .pricing_container .card:nth-child(2) {
@@ -1453,8 +1463,7 @@ li:nth-child(5) .domain__info .domain__name {
     position: relative;
     margin-top: 7%;
     background: #00000061;
-    padding: 3%;
-    padding: 3rem 7% 3rem 7%;
+    padding: 3rem 10% 3rem 10%;
     background-size: 50%;
     background-position: 168% -150%;
     backdrop-filter: blur(100px);
