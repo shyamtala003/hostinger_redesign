@@ -58,7 +58,7 @@ MenuBtn.onclick = () => {
 
 // code for timer
 
-var countDownDate = new Date("Oct 12, 2022 15:37:25").getTime();
+var countDownDate = new Date("Jan 12, 2023 15:37:25").getTime();
 
 var x = setInterval(() => {
 
